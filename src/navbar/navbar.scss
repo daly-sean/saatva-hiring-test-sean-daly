@@ -1,0 +1,49 @@
+nav-bar {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  height: 3rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid lightgrey;
+
+  .navBar__ {
+    &home {
+      color: #e2d0c1;
+      text-decoration: none;
+    }
+
+    &cart {
+      position: relative;
+      width: 5rem;
+      text-align: center;
+
+      &-number {
+        position: absolute;
+        z-index: 999;
+        left: 20px;
+        top: -5px;
+        width: 1rem;
+        border-radius: 50%;
+        border: 2px solid #000;
+        text-align: center;
+        color: #000;
+        background-color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      &-c-icon {
+        width: fit-content;
+
+        .icon {
+          font-size: 2rem;
+          color: #e2d0c1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

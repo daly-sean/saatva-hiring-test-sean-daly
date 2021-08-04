@@ -1,0 +1,170 @@
+marketplace-home {
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+
+  .marketplace__ {
+    &image {
+      display: flex;
+      border-radius: 8px;
+      place-self: center;
+      margin-top: 1rem;
+      max-width: 640px;
+
+      &-src {
+        max-width: 100%;
+        display: block;
+        border-radius: 8px;
+        border: 1px solid #d3ab63;
+      }
+    }
+
+    &details {
+      width: 90%;
+      display: grid;
+      grid-template-rows: repeat(4, min-content);
+      gap: 2.5rem;
+      text-align: left;
+      align-items: center;
+
+      &-title {
+        font-family: "Source Serif Pro", serif;
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+
+      &-toggle {
+        &-selector {
+          display: grid;
+          grid-template-columns: repeat(3, auto);
+          width: 100%;
+          border: 1px solid #a6a19b;
+          margin-top: 0.25rem;
+          color: #a6a19b;
+          background-color: #fff;
+
+          > button:not(:last-child) {
+            border-right: 1px solid #a6a19b;
+          }
+
+          .selector-option {
+            padding: 0.5rem 0.25rem;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+
+            &--SELECTED {
+              background-color: #a6a19b;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      &-selected-info {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        gap: 0.25rem;
+        padding: 0 0.25rem;
+        height: fit-content;
+
+        &-row {
+          display: flex;
+          justify-content: space-between;
+
+          .name {
+            font-weight: bold;
+          }
+
+          .price {
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+
+  .add-to-cart-btn {
+    place-self: center;
+    width: 75%;
+    height: 2rem;
+    margin: 0 auto;
+    border: none;
+    border-radius: 8px;
+    background-color: #d3ab63;
+    color: #fff;
+    font-family: "Questrial", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 425px) {
+  marketplace-home {
+    .marketplace__ {
+      &image {
+        min-height: 210px;
+      }
+
+      &details {
+        width: 100%;
+
+        &-title {
+          font-size: 24px;
+        }
+
+        &-toggle {
+          &-selector {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  marketplace-home {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+
+    .marketplace__ {
+      &image {
+        margin: auto;
+        place-self: center;
+        text-align: center;
+        &-src {
+          place-self: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: px) {
+  marketplace-home {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+
+    .marketplace__ {
+      &image {
+        margin: auto;
+        min-height: 210px;
+        place-self: center;
+        text-align: center;
+        &-src {
+          place-self: center;
+        }
+      }
+    }
+  }
+}
