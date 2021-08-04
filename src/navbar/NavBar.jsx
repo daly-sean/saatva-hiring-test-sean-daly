@@ -21,9 +21,9 @@ export function NavBar(props) {
         <h1>Saatva</h1>
       </a>
 
-      <div className="navBar__cart">
+      <div className="navBar__cart" onClick={handleIsCartVisibleClick}>
         <div className="navBar__cart-number">{cart?.length}</div>
-        <div className="navBar__cart-c-icon" onClick={handleIsCartVisibleClick}>
+        <div className="navBar__cart-c-icon">
           <FontAwesomeIcon icon={faShoppingCart} className="icon" />
         </div>
         {isCartVisible && <CartDetails />}
